@@ -147,11 +147,11 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'French',
-        level: 4,
+        level: 8,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Arabic',
+        level: 9,
       },
     ],
   },
@@ -163,11 +163,15 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
+        name: 'Angular',
+        level: 7,
+      },
+      {
         name: 'Typescript',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Flutter/Dart',
         level: 6,
       },
     ],
@@ -176,33 +180,37 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
+        name: 'Java',
+        level: 9,
+      },
+      {
         name: 'Node.js',
-        level: 8,
+        level: 6,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Python',
+        level: 7,
       },
       {
-        name: 'Golang',
+        name: 'C',
         level: 4,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Productivity Tools',
     skills: [
       {
-        name: 'React Native',
+        name: 'Docker',
+        level: 7,
+      },
+      {
+        name: 'MediaWiki',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
+        name: 'Figma',
+        level: 5,
       },
     ],
   },
@@ -285,39 +293,70 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2024 - 2027',
+    location: 'ESPRIT',
+    title: 'Software engineer',
+    content: <p>🕒 Currently studying to get my software engineering degree. 🕒</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2021 - 2024',
+    location: 'ISTIC Borj Cedria',
+    title: 'Licence CS GLSI',
+    content: <p>Comprehensive program that covers software development, design, and data management.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'June 2024 - Present',
+    location: 'Wecraft',
+    title: 'Full-Stack Web Developer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        <p>Developing and maintaining a comprehensive CRM for pharmaceutical laboratories 💊.</p>
+        <p>
+          My role includes implementing front-end interfaces, developing back-end functionalities, and designing
+          thorough tests for both.
+        </p>
+        <p className="my-2 border-t border-gray-300"></p>
+        <p>
+          Technologies used:
+          {[
+            {name: 'React', imgSrc: '/assets/react-logo.png'},
+            {name: 'Quarkus Java', imgSrc: '/assets/quarkus-logo.png'},
+            {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
+            {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
+            {name: 'Postgres', imgSrc: '/assets/postgres-logo.png'},
+            {name: 'MongoDB', imgSrc: '/assets/mongo-logo.png'},
+          ].map((tech, index) => (
+            <span className="inline-flex items-center gap-1" key={index}>
+              &nbsp;{tech.name}
+              <img
+                alt={tech.name}
+                className="my-0 inline-block rounded-md py-0 align-middle"
+                src={tech.imgSrc}
+                style={{
+                  margin: 0,
+                  padding: 0,
+                }}
+                width={20}
+              />
+              ,
+            </span>
+          ))}
+        </p>
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'January 2024 - June 2024',
+    location: 'Wecraft',
+    title: 'End of Studies Internship',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        During my internship, I gained hands-on experience in developing and maintaining web applications, contributing
+        to both front-end and back-end tasks. I worked on various projects including the CRM for pharmaceutical
+        laboratories, where I honed my skills in React, Java, Docker, and databases like Postgres and MongoDB.
       </p>
     ),
   },

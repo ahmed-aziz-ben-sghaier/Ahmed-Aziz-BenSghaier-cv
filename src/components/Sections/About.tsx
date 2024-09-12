@@ -30,7 +30,7 @@ const About: FC = memo(() => {
                           Discord
                           <img
                             alt="Discord"
-                            className=" inline-block p-0 align-middle"
+                            className=" inline-block rounded-md p-0 align-middle"
                             key={wordIndex}
                             src="/assets/discord-logo.jpg"
                             style={{
@@ -48,7 +48,7 @@ const About: FC = memo(() => {
                           Javascript
                           <img
                             alt="JavaScript"
-                            className=" my-0 inline-block py-0 align-middle"
+                            className=" my-0 inline-block rounded-md py-0 align-middle"
                             key={wordIndex}
                             src="/assets/JavaScript-logo.png"
                             style={{
