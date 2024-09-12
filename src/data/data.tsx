@@ -155,7 +155,7 @@ export const skills: SkillGroup[] = [
       {
         name: 'React',
         level: 8.5,
-        image: '/assets/React-logo.png',
+        image: '/assets/react-logo.png',
       },
       {
         name: 'Angular',
@@ -277,7 +277,7 @@ export const experience: TimelineItem[] = [
         <p>
           Technologies used:
           {[
-            {name: 'React', imgSrc: '/assets/React-logo.png'},
+            {name: 'React', imgSrc: '/assets/react-logo.png'},
             {name: 'Quarkus Java', imgSrc: '/assets/quarkus-logo.png'},
             {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
             {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
