@@ -26,8 +26,9 @@ const nextConfig = {
   },
   strictMode: true,
   swcMinify: true,
-  trailingSlash: false,
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     domains: ['images.unsplash.com', 'source.unsplash.com'],
   },
 };

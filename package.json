@@ -9,7 +9,9 @@
     "dev": "cross-env yarn compile && npx next dev",
     "lint": "prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "npx next start",
-    "sitemap": "npx next-sitemap"
+    "sitemap": "npx next-sitemap",
+    "export": "npx next export",
+    "deploy": "yarn build && yarn export && firebase deploy"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",

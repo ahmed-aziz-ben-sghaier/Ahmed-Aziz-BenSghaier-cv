@@ -20,7 +20,51 @@ const About: FC = memo(() => {
         <div className={classNames('col-span-1 flex flex-col gap-y-6', {'md:col-span-3': !!profileImageSrc})}>
           <div className="flex flex-col gap-y-2">
             <h2 className="text-2xl font-bold text-white">About me</h2>
-            <p className="prose prose-sm text-gray-300 sm:prose-base">{description}</p>
+            <p className="prose prose-sm text-gray-300 sm:prose-base">
+              {description.split('\n').map((line, index) => (
+                <div key={index}>
+                  {line.split(' ').map((word, wordIndex) => {
+                    if (word === 'Discord') {
+                      return (
+                        <span className=" inline-flex items-center gap-1" key={wordIndex}>
+                          Discord
+                          <img
+                            alt="Discord"
+                            className=" inline-block p-0 align-middle"
+                            key={wordIndex}
+                            src="/assets/discord-logo.jpg"
+                            style={{
+                              margin: 0,
+                              marginRight: '5px',
+                              padding: 0,
+                            }}
+                            width={20}
+                          />
+                        </span>
+                      );
+                    } else if (word === 'JavaScript.') {
+                      return (
+                        <span className=" inline-flex items-center gap-1" key={wordIndex}>
+                          Javascript
+                          <img
+                            alt="JavaScript"
+                            className=" my-0 inline-block py-0 align-middle"
+                            key={wordIndex}
+                            src="/assets/JavaScript-logo.png"
+                            style={{
+                              margin: 0,
+                              padding: 0,
+                            }}
+                            width={20}
+                          />
+                        </span>
+                      );
+                    }
+                    return <span key={wordIndex}>{word} </span>;
+                  })}
+                </div>
+              ))}
+            </p>
           </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {aboutItems.map(({label, text, Icon}, idx) => (
