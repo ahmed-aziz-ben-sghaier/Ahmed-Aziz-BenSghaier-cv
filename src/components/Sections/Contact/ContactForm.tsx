@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import {FC, memo, useCallback, useMemo, useState} from 'react';
 
 interface FormData {
@@ -17,13 +18,12 @@ const ContactForm: FC = memo(() => {
   );
 
   const [data, setData] = useState<FormData>(defaultData);
+  const [status, setStatus] = useState<string | null>(null);
 
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
       const {name, value} = event.target;
-
       const fieldData: Partial<FormData> = {[name]: value};
-
       setData({...data, ...fieldData});
     },
     [data],
@@ -32,10 +32,19 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+
+      const formDataRecord: Record<string, unknown> = {
+        from_name: data.name,
+        email: data.email,
+        message: data.message,
+      };
+
+      try {
+        await emailjs.send('service_ialq19j', 'template_roh2pmr', formDataRecord, '5JcbdFW4WzhmaC_0O');
+        setStatus('Message sent successfully!');
+      } catch (error) {
+        setStatus('An error occurred.');
+      }
     },
     [data],
   );
@@ -44,7 +53,7 @@ const ContactForm: FC = memo(() => {
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
   return (
-    <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
+    <form className="min-h-[320px] grid grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
       <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
       <input
         autoComplete="email"
@@ -70,6 +79,7 @@ const ContactForm: FC = memo(() => {
         type="submit">
         Send Message
       </button>
+      {status && <p>{status}</p>}
     </form>
   );
 });
