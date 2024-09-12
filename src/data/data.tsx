@@ -230,7 +230,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'FTL Autosave Manager',
     description:
-      'Autosave and back-up Manager for FTL (Faster than light), helped me learn various things like creating a GUI and proper backup management. Written entirely in Java (and an older obsolete version in python).',
+      'Autosave and back-up Manager for FTL (Faster than light), helped me learn various things like creating a GUI, proper backup management for files and distributing software releases. Written entirely in Java (and an older obsolete version in python).',
     url: 'https://github.com/Koussay-Akchi/FTLAutosaveManager',
     image: FTL,
   },
@@ -347,7 +347,7 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'If you have an idea or just want to chat, feel free to to contact me.',
   items: [
     {
       type: ContactType.Email,
