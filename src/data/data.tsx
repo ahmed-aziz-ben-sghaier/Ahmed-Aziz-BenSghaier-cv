@@ -144,14 +144,17 @@ export const skills: SkillGroup[] = [
       {
         name: 'English',
         level: 10,
+        image: '/assets/english.png',
       },
       {
         name: 'French',
         level: 8,
+        image: '/assets/french.png',
       },
       {
         name: 'Arabic',
         level: 9,
+        image: '/assets/arabic.png',
       },
     ],
   },
@@ -160,19 +163,25 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 8.5,
+        image: '/assets/React-logo.png',
       },
       {
         name: 'Angular',
         level: 7,
+        image: '/assets/angular-logo.png',
       },
       {
-        name: 'Typescript',
+        name: 'TypeScript',
         level: 7,
+        image: '/assets/typeScript-logo.png',
+        image2: '/assets/JavaScript-logo.png',
       },
       {
         name: 'Flutter/Dart',
         level: 6,
+        image: '/assets/flutter-logo.png',
+        image2: '/assets/dart-logo.png',
       },
     ],
   },
@@ -182,18 +191,22 @@ export const skills: SkillGroup[] = [
       {
         name: 'Java',
         level: 9,
+        image: '/assets/java-logo.png',
       },
       {
         name: 'Node.js',
         level: 6,
+        image: '/assets/node-logo.png',
       },
       {
         name: 'Python',
-        level: 7,
+        level: 7.5,
+        image: '/assets/python-logo.png',
       },
       {
         name: 'C',
         level: 4,
+        image: '/assets/c-logo.png',
       },
     ],
   },
@@ -203,14 +216,17 @@ export const skills: SkillGroup[] = [
       {
         name: 'Docker',
         level: 7,
+        image: '/assets/Docker-logo.png',
       },
       {
         name: 'MediaWiki',
         level: 9,
+        image: '/assets/mediaWiki-logo.png',
       },
       {
         name: 'Figma',
         level: 5,
+        image: '/assets/figma-logo.png',
       },
     ],
   },
@@ -369,19 +385,19 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Youssef Mseddi',
+      text: 'Koussay is an exceptional team player with a keen eye for detail. Their contributions during our hackathons were instrumental in our success. Their technical skills are top-tier, and they have a knack for innovative problem-solving."',
+      image: '/assets/ymseddi.jpg',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'Aziz Ben Sghaeir',
+      text: 'I have known Koussay for years, and he is a reliable and skilled developer. He consistently produces high-quality work and handles complex tasks with ease. Its always great to work with him.',
+      image: '/assets/bal3awi.jpg',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Oussama Ajmi',
+      text: 'I’ve had Koussay help me with various projects with both creativity and precision. He is not just skilled but also great at explaining technical details.',
+      image: '/assets/ajmi.jpg',
     },
   ],
 };
@@ -396,13 +412,13 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'akchikoussay@gmail.com',
+      href: 'mailto:akchikoussay@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Tunis, Tunisia',
+      href: 'https://www.google.com/maps/place/Mutuelleville,+Tunis/data=!4m2!3m1!1s0x12fd336257d86031:0xf28a28bc2a04834e?sa=X&ved=1t:242&ictx=111',
     },
     {
       type: ContactType.Github,
@@ -416,7 +432,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Koussay-Akchi'},
   {label: 'LeetCode', Icon: LeetCodeIcon, href: 'https://leetcode.com/u/ogNF1G5yTA/'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/koussay-akchi-782765274/'},
 ];
