@@ -165,7 +165,7 @@ export const skills: SkillGroup[] = [
       {
         name: 'TypeScript',
         level: 7,
-        image: '/assets/typeScript-logo.png',
+        image: '/assets/typescript-logo.png',
         image2: '/assets/JavaScript-logo.png',
       },
       {
@@ -207,12 +207,12 @@ export const skills: SkillGroup[] = [
       {
         name: 'Docker',
         level: 7,
-        image: '/assets/Docker-logo.png',
+        image: '/assets/docker-logo.png',
       },
       {
         name: 'MediaWiki',
         level: 9,
-        image: '/assets/mediaWiki-logo.png',
+        image: '/assets/mediawiki-logo.png',
       },
       {
         name: 'Figma',
@@ -277,7 +277,7 @@ export const experience: TimelineItem[] = [
         <p>
           Technologies used:
           {[
-            {name: 'React', imgSrc: '/assets/react-logo.png'},
+            {name: 'React', imgSrc: '/assets/React-logo.png'},
             {name: 'Quarkus Java', imgSrc: '/assets/quarkus-logo.png'},
             {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
             {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
@@ -311,7 +311,7 @@ export const experience: TimelineItem[] = [
       <p>
         During my internship, I gained hands-on experience in developing and maintaining web applications, contributing
         to both front-end and back-end tasks. I worked on various projects including the CRM for pharmaceutical
-        laboratories, where I honed my skills in React, Java, Docker, and databases like Postgres and MongoDB.
+        laboratories, where I honed my skills in the technologies mentioned above.
       </p>
     ),
   },
