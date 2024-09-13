@@ -6,17 +6,24 @@ import {aboutData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
 const About: FC = memo(() => {
-  const {profileImageSrc, description, aboutItems} = aboutData;
+  const {profileImageSrc, profileImageSrc2, description, aboutItems} = aboutData;
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.About}>
       <div className={classNames('grid grid-cols-1 gap-y-4', {'md:grid-cols-4': !!profileImageSrc})}>
         {!!profileImageSrc && (
-          <div className="col-span-1 flex justify-center md:justify-start">
+          <div className="col-span-1 mr-8 flex flex-col items-center justify-center">
             <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-32 md:w-32">
               <Image alt="about-me-image" layout="fill" objectFit="cover" src={profileImageSrc} />
             </div>
+
+            {!!profileImageSrc2 && (
+              <div className="relative mt-4 h-48 w-32 overflow-hidden rounded-xl md:h-56 md:w-40">
+                <Image alt="about-me-image-2" layout="fill" objectFit="cover" src={profileImageSrc2} />
+              </div>
+            )}
           </div>
         )}
+
         <div className={classNames('col-span-1 flex flex-col gap-y-6', {'md:col-span-3': !!profileImageSrc})}>
           <div className="flex flex-col gap-y-2">
             <h2 className="text-2xl font-bold text-white">About me</h2>
@@ -33,11 +40,7 @@ const About: FC = memo(() => {
                             className=" inline-block rounded-md p-0 align-middle"
                             key={wordIndex}
                             src="/assets/discord-logo.jpg"
-                            style={{
-                              margin: 0,
-                              marginRight: '5px',
-                              padding: 0,
-                            }}
+                            style={{margin: 0, marginRight: '5px', padding: 0}}
                             width={20}
                           />
                         </span>
@@ -51,10 +54,7 @@ const About: FC = memo(() => {
                             className=" my-0 inline-block rounded-md py-0 align-middle"
                             key={wordIndex}
                             src="/assets/JavaScript-logo.png"
-                            style={{
-                              margin: 0,
-                              padding: 0,
-                            }}
+                            style={{margin: 0, padding: 0}}
                             width={20}
                           />
                         </span>
@@ -68,10 +68,10 @@ const About: FC = memo(() => {
           </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {aboutItems.map(({label, text, Icon}, idx) => (
-              <li className="col-span-1 flex  items-start gap-x-2" key={idx}>
+              <li className="col-span-1 flex items-start gap-x-2" key={idx}>
                 {Icon && <Icon className="h-5 w-5 text-white" />}
                 <span className="text-sm font-bold text-white">{label}:</span>
-                <span className=" text-sm text-gray-300">{text}</span>
+                <span className="text-sm text-gray-300">{text}</span>
               </li>
             ))}
           </ul>
