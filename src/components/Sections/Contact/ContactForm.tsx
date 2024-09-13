@@ -1,5 +1,6 @@
 import emailjs from 'emailjs-com';
 import {FC, memo, useCallback, useMemo, useState} from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 interface FormData {
   name: string;
@@ -19,6 +20,8 @@ const ContactForm: FC = memo(() => {
 
   const [data, setData] = useState<FormData>(defaultData);
   const [status, setStatus] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
@@ -29,14 +32,26 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
+  const handleRecaptchaChange = useCallback((value: string | null) => {
+    setRecaptchaValue(value);
+  }, []);
+
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
+      if (isSubmitting) return;
+      if (!recaptchaValue) {
+        setStatus('Please complete the CAPTCHA.');
+        return;
+      }
+
+      setIsSubmitting(true);
 
       const formDataRecord: Record<string, unknown> = {
         from_name: data.name,
         email: data.email,
         message: data.message,
+        'g-recaptcha-response': recaptchaValue,
       };
 
       try {
@@ -45,15 +60,17 @@ const ContactForm: FC = memo(() => {
       } catch (error) {
         setStatus('An error occurred.');
       }
+
+      setTimeout(() => setIsSubmitting(false), 30000);
     },
-    [data],
+    [isSubmitting, recaptchaValue, data],
   );
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
   return (
-    <form className="min-h-[320px] grid grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
+    <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
       <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
       <input
         autoComplete="email"
@@ -73,12 +90,24 @@ const ContactForm: FC = memo(() => {
         required
         rows={6}
       />
+
+      <ReCAPTCHA onChange={handleRecaptchaChange} sitekey="6LdZvkAqAAAAAG1N0m_0DMITRAr3cQupg2iWrNtU" />
+
       <button
         aria-label="Submit contact form"
-        className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+        className={`
+        w-max rounded-full border-2 px-4 py-2 text-sm font-medium shadow-md outline-none
+        ${
+          isSubmitting || !recaptchaValue
+            ? 'cursor-not-allowed border-gray-600 bg-gray-900 text-gray-400'
+            : 'border-orange-600 bg-stone-900 text-white hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800'
+        }
+      `}
+        disabled={isSubmitting || !recaptchaValue}
         type="submit">
         Send Message
       </button>
+
       {status && <p>{status}</p>}
     </form>
   );

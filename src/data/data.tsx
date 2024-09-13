@@ -107,7 +107,7 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   profileImageSrc2: profilepic2,
   description: `I started programming when I was 14. I didn't take it too seriously and was just playing around with Discord bot programming with JavaScript. 
-  It was a rogue start, though I managed to continue doing so! I started to take it more seriously from there on and learned many languages and concepts throught high school and university.
+  It was a rogue start, though I managed to continue doing so! I started to take it more seriously from there on and learned many languages and concepts through high school and university.
    It was a fun journey. I've discovered a lot of knowledge which I probably would never get to learn if I didn't have the motivation to do so.`,
   aboutItems: [
     {label: 'Location', text: 'Tunis, Tunisia', Icon: MapIcon},
@@ -204,7 +204,7 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    name: 'Productivity Tools',
+    name: 'Other Tools',
     skills: [
       {
         name: 'Docker',
