@@ -87,7 +87,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/assets/cv_english.pdf',
       text: 'Resume',
       primary: true,
       Icon: DownloadIcon,
@@ -285,20 +285,17 @@ export const experience: TimelineItem[] = [
             {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
             {name: 'Postgres', imgSrc: '/assets/postgres-logo.png'},
             {name: 'MongoDB', imgSrc: '/assets/mongo-logo.png'},
-          ].map((tech, index) => (
+          ].map((tech, index, array) => (
             <span className="inline-flex items-center gap-1" key={index}>
               &nbsp;{tech.name}
               <img
                 alt={tech.name}
                 className="my-0 inline-block rounded-md py-0 align-middle"
                 src={tech.imgSrc}
-                style={{
-                  margin: 0,
-                  padding: 0,
-                }}
+                style={{margin: 0, padding: 0}}
                 width={20}
               />
-              ,
+              {index < array.length - 1 && ' -'}
             </span>
           ))}
         </p>
