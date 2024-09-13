@@ -1,4 +1,6 @@
-import React, {createContext, FC, ReactNode, useContext, useState} from 'react';
+import React, {createContext, FC, ReactNode, useContext, useEffect, useState} from 'react';
+
+import i18n from './../../src/pages/i18n'; // Adjust the import path as needed
 
 type Language = 'en' | 'fr';
 
@@ -15,6 +17,10 @@ interface LanguageProviderProps {
 
 const LanguageProvider: FC<LanguageProviderProps> = React.memo(({children}) => {
   const [language, setLanguage] = useState<Language>('en');
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language]);
 
   return <LanguageContext.Provider value={{language, setLanguage}}>{children}</LanguageContext.Provider>;
 });

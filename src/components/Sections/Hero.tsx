@@ -2,6 +2,7 @@ import {ChevronDownIcon} from '@heroicons/react/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo} from 'react';
+import {useTranslation} from 'react-i18next';
 
 import {heroData, SectionId} from '../../data/data';
 import LanguageToggle from '../LanguageToggle';
@@ -11,6 +12,8 @@ import {useLanguage} from './../../contexts/LanguageContext';
 
 const Hero: FC = memo(() => {
   const {imageSrc, name, description, actions} = heroData;
+
+  const {t} = useTranslation();
   const resumeHref = useLanguage().language === 'fr' ? '/assets/cv_francais.pdf' : '/assets/cv_english.pdf';
 
   return (
@@ -28,7 +31,7 @@ const Hero: FC = memo(() => {
         <div className="z-10  max-w-screen-lg px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
             <LanguageToggle />
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{name}</h1>
+            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{t('myName')}</h1>
             {description}
             <div className="flex gap-x-4 text-neutral-100">
               <Socials />

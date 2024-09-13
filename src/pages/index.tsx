@@ -1,3 +1,5 @@
+import './i18n';
+
 import dynamic from 'next/dynamic';
 import {FC, memo} from 'react';
 
