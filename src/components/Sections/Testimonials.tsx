@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
 import {isApple, isMobile} from '../../config';
 import {SectionId, testimonial} from '../../data/data';
@@ -65,6 +66,8 @@ const Testimonials: FC = memo(() => {
 
   useInterval(next, 10000);
 
+  const {i18n} = useTranslation();
+
   // If no testimonials, don't render the section
   if (!testimonials.length) {
     return null;
@@ -81,6 +84,9 @@ const Testimonials: FC = memo(() => {
         style={imageSrc ? {backgroundImage: `url(${resolveSrc}`} : undefined}>
         <div className="z-10 w-full max-w-screen-md px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/60 p-6 shadow-lg">
+            {i18n.language === 'en' && (
+              <h2 className="self-center text-base font-semibold   text-white">( Translated from french )</h2>
+            )}
             <div
               className="no-scrollbar flex w-full touch-pan-x snap-x snap-mandatory gap-x-6 overflow-x-auto scroll-smooth"
               onScroll={handleScroll}
@@ -115,26 +121,30 @@ const Testimonials: FC = memo(() => {
 });
 
 const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
-  ({testimonial: {text, name, image}, isActive}) => (
-    <div
-      className={classNames(
-        'flex w-full shrink-0 snap-start snap-always flex-col items-start gap-y-4 p-2 transition-opacity duration-1000 sm:flex-row sm:gap-x-6',
-        isActive ? 'opacity-100' : 'opacity-0',
-      )}>
-      {image ? (
-        <div className="relative h-14 w-14 shrink-0 sm:h-16 sm:w-16">
-          <QuoteIcon className="absolute -left-2 -top-2 h-4 w-4 stroke-black text-white" />
-          <img className="h-full w-full rounded-full" src={image} />
+  ({testimonial: {text, name, image}, isActive}) => {
+    const {t} = useTranslation();
+
+    return (
+      <div
+        className={classNames(
+          'flex w-full shrink-0 snap-start snap-always flex-col items-start gap-y-4 p-2 transition-opacity duration-1000 sm:flex-row sm:gap-x-6',
+          isActive ? 'opacity-100' : 'opacity-0',
+        )}>
+        {image ? (
+          <div className="relative h-14 w-14 shrink-0 sm:h-16 sm:w-16">
+            <QuoteIcon className="absolute -left-2 -top-2 h-4 w-4 stroke-black text-white" />
+            <img alt="Testimonial" className="h-full w-full rounded-full" src={image} />
+          </div>
+        ) : (
+          <QuoteIcon className="h-5 w-5 shrink-0 text-white sm:h-8 sm:w-8" />
+        )}
+        <div className="flex flex-col gap-y-4">
+          <p className="prose prose-sm font-medium italic text-white sm:prose-base">{t(text)}</p>
+          <p className="text-xs italic text-white sm:text-sm md:text-base lg:text-lg">-- {name}</p>
         </div>
-      ) : (
-        <QuoteIcon className="h-5 w-5 shrink-0 text-white sm:h-8 sm:w-8" />
-      )}
-      <div className="flex flex-col gap-y-4">
-        <p className="prose prose-sm font-medium italic text-white sm:prose-base">{text}</p>
-        <p className="text-xs italic text-white sm:text-sm md:text-base lg:text-lg">-- {name}</p>
       </div>
-    </div>
-  ),
+    );
+  },
 );
 
 export default Testimonials;

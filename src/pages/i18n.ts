@@ -14,7 +14,7 @@ const resources = {
         " with a strong interest in the concepts of automation and open-source technologies. I'm currently working part-time as a web developer and finishing my studies.",
       heroDescription3:
         'In my free time, you can find me taking on personal projects and collaborating with others in the tech community.',
-      resume: 'CV (English)',
+      resume2: 'CV (English)',
       contact: 'Contact',
       aboutDescription:
         "I started programming when I was 14. I didn't take it too seriously and was just playing around with Discord bot programming with JavaScript . It was a rogue start, though I managed to continue doing so! I started to take it more seriously from there on and learned many languages and concepts through high school and university. It was a fun journey. I've discovered a lot of knowledge which I probably would never get to learn if I didn't have the motivation to do so.",
@@ -39,20 +39,10 @@ const resources = {
       educationEspritDetail: '🕒 Currently studying to get my software engineering degree. 🕒',
       educationISTICDetail:
         'Comprehensive program that covers software development, design, algorithms and data structures.',
-      experienceLocation1: 'Tech Company',
-      experienceTitle1: 'Software Engineer Intern',
       experienceContent1:
-        'Worked on various projects involving React and Quarkus Java. Technologies used include Docker, JWT, Postgres, and MongoDB.',
-      experienceLocation2: 'Another Company',
-      experienceTitle2: 'Junior Developer',
+        'Developing and maintaining a comprehensive CRM for pharmaceutical laboratories 💊. My role includes implementing front-end interfaces, developing back-end functionalities, and designing thorough tests for both.',
       experienceContent2:
-        'Contributed to various web development projects and gained experience in full-stack development.',
-      testimonialName1: 'John Doe',
-      testimonialText1:
-        'Koussay is a highly skilled developer with a strong work ethic. His contributions to our projects were invaluable.',
-      testimonialName2: 'Jane Smith',
-      testimonialText2:
-        'Working with Koussay was a pleasure. His technical expertise and problem-solving skills are top-notch.',
+        "During my internship, I gained hands-on experience in developing and maintaining web applications, contributing to both front-end and back-end tasks. I worked on the CRM for pharmaceutical laboratories, focusing on the architecture's conception and initial implementation, and honing my skills in the technologies mentioned above.",
       github: 'GitHub',
       linkedin: 'LinkedIn',
       leetcode: 'LeetCode',
@@ -65,6 +55,16 @@ const resources = {
       interests: 'Automation, DevOps, Web Development',
       aboutMe: 'About me',
       checkOut: 'Check out some of my work',
+      fullStackDev: 'Full-Stack Web Developer',
+      pfe: 'End of Studies Internship',
+      test1:
+        'Koussay is an exceptional team player with a keen eye for detail. Their contributions during our hackathons were instrumental in our success. Their technical skills are top-tier, and they have a knack for innovative problem-solving.',
+      test2:
+        'I have known Koussay for years, and he is a reliable and skilled developer. He consistently produces high-quality work and handles complex tasks with ease. Its always great to work with him.',
+      test3:
+        "I've had Koussay help me with various projects. He is not just skilled but also great at explaining technical details.",
+      contactDescription: 'If you have an idea or just want to chat, feel free to to contact me.',
+      getInTouch: 'Get in touch.',
     },
   },
   fr: {
@@ -76,7 +76,7 @@ const resources = {
         " passionné avec un fort intérêt pour les concepts d'automatisation et les technologies open-source. Je travaille actuellement à temps partiel en tant que développeur web et je continue études.",
       heroDescription3:
         'Pendant mon temps libre,  je travaille sur des projets personnels et je collabore avec la communauté technologique.',
-      resume: 'CV (Francais)',
+      resume2: 'CV (Francais)',
       contact: 'Contact',
       aboutDescription:
         "J'ai commencé à programmer à 14 ans. Je ne le prenais pas trop au sérieux et je m'amusais simplement à programmer des robots Discord avec JavaScript . C'était un début difficile, mais j'ai réussi à continuer ! J'ai commencé à le prendre plus au sérieux à partir de là et j'ai appris de nombreux langages et concepts au lycée et à l'université. Ce fut un voyage amusant. J'ai découvert beaucoup de connaissances que je n'aurais probablement jamais pu apprendre si je n'avais pas eu la motivation pour le faire.",
@@ -102,20 +102,6 @@ const resources = {
       educationEspritDetail: '🕒 En cours d’études pour mon diplôme en ingénierie logicielle. 🕒',
       educationISTICDetail:
         'Programme complet qui couvre le développement de logiciels, la conception, les algorithmes et les structures de données.',
-      experienceLocation1: 'Entreprise Tech',
-      experienceTitle1: 'Stagiaire Développeur',
-      experienceContent1:
-        'Travail sur divers projets impliquant React et Quarkus Java. Technologies utilisées : Docker, JWT, Postgres et MongoDB.',
-      experienceLocation2: 'Autre Entreprise',
-      experienceTitle2: 'Développeur Junior',
-      experienceContent2:
-        'Contribution à divers projets de développement web et expérience acquise en développement full-stack.',
-      testimonialName1: 'John Doe',
-      testimonialText1:
-        'Koussay est un développeur hautement qualifié avec une forte éthique de travail. Ses contributions à nos projets ont été inestimables.',
-      testimonialName2: 'Jane Smith',
-      testimonialText2:
-        'Travailler avec Koussay a été un plaisir. Son expertise technique et ses compétences en résolution de problèmes sont exceptionnelles.',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       leetcode: 'LeetCode',
@@ -130,8 +116,31 @@ const resources = {
       French: 'Français',
       Arabic: 'Arabe',
       work: 'Experience',
-      skills: 'competences',
       checkOut: 'Voici quelques exemples de mes projets',
+      fullStackDev: 'Développeur Web Full Stack',
+      experienceContent1:
+        "Développer et maintenir un CRM complet pour les laboratoires pharmaceutiques 💊. Mon rôle comprend la mise en œuvre d'interfaces front-end, le développement de fonctionnalités back-end et la conception de tests approfondis pour les deux.",
+      pfe: "Stage de fin d'études",
+      experienceContent2:
+        "Pendant mon stage, j'ai acquis une expérience pratique dans le développement et la maintenance d'applications Web, en contribuant à la fois aux tâches front-end et back-end. J'ai travaillé sur le CRM des laboratoires pharmaceutiques, en me concentrant sur la conception de l'architecture et la mise en œuvre initiale, et en perfectionnant mes compétences dans les technologies mentionnées ci-dessus.",
+      hero: 'Accueil',
+      about: 'À propos',
+      portfolio: 'Portfolio',
+      resume: 'CV',
+      skills: 'Compétences',
+      stats: 'Statistiques',
+      testimonials: 'Témoignages',
+      'June 2024 - Present': 'Juin 2024 - Present',
+      'January 2024 - June 2024': 'Janvier 2024 - Juin 2024',
+      test1:
+        "Koussay est un membre d'équipe exceptionnel avec un œil attentif aux détails. Ses contributions lors de nos hackathons ont été déterminantes pour notre succès. Ses compétences techniques sont de haut niveau, et il sait résoudre les problèmes de manière innovante.",
+      test2:
+        "Je connais Koussay depuis des années, et c'est un développeur fiable et compétent. Il fait toujours un travail de haute qualité et gère les tâches complexes avec facilité. C'est toujours un plaisir de travailler avec lui.",
+      test3:
+        "J'ai fait appel à Koussay pour divers projets. Il n'est pas seulement compétent, mais il excelle également dans l'explication des détails techniques.",
+      contactDescription: "Si vous avez une idée ou souhaitez simplement discuter, n'hésitez pas à me contacter.",
+      getInTouch: 'Contactez-moi.',
+      'Send Email': 'Envoyer Email',
     },
   },
 };

@@ -95,6 +95,7 @@ export interface TimelineItem {
   title: string;
   content?: JSX.Element;
   education?: string;
+  experience?: string;
 }
 
 /**

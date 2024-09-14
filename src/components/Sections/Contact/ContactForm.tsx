@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com';
 import {FC, memo, useCallback, useMemo, useState} from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import {useTranslation} from 'react-i18next';
 
 interface FormData {
   name: string;
@@ -69,6 +70,7 @@ const ContactForm: FC = memo(() => {
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
+  const {t} = useTranslation();
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
       <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
@@ -105,7 +107,7 @@ const ContactForm: FC = memo(() => {
       `}
         disabled={isSubmitting || !recaptchaValue}
         type="submit">
-        Send Message
+        {t('Send Email')}
       </button>
 
       {status && <p>{status}</p>}

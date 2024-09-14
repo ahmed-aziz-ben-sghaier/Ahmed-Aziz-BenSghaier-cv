@@ -14,7 +14,8 @@ const Hero: FC = memo(() => {
   const {imageSrc, name, actions} = heroData;
 
   const {t} = useTranslation();
-  const resumeHref = useLanguage().language === 'fr' ? '/assets/cv_francais.pdf' : '/assets/cv_english.pdf';
+  const resumeHref =
+    useLanguage().language === 'fr' ? '/assets/koussay_akchi_cv_francais.pdf' : '/assets/koussay_akchi_cv_english.pdf';
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
@@ -31,7 +32,7 @@ const Hero: FC = memo(() => {
         <div className="z-10  max-w-screen-lg px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
             <LanguageToggle />
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{t('myName')}</h1>
+            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-5xl">{t('myName')}</h1>
             <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
               {t('heroDescription1')}
               <strong className="text-stone-100">{t('myJobTitle')}</strong>

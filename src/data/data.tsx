@@ -15,7 +15,6 @@ import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import profilepic2 from '../images/wecraft.png';
-import i18n from '../pages/i18n';
 import cars from './../../public/assets/cars.jpg';
 import FTL from './../../public/assets/FTL.png';
 import {
@@ -43,10 +42,6 @@ const calculateAge = (birthDate: Date): number => {
   return age;
 };
 
-const translate = (key: string) => {
-  return i18n.t(key);
-};
-
 export const homePageMeta: HomepageMeta = {
   title: 'Koussay Akchi',
   description: 'Home page',
@@ -70,7 +65,7 @@ export const heroData: Hero = {
   name: 'Koussay Akchi',
   actions: [
     {
-      text: 'resume',
+      text: 'resume2',
       primary: true,
       Icon: DownloadIcon,
     },
@@ -225,40 +220,38 @@ export const experience: TimelineItem[] = [
     date: 'June 2024 - Present',
     location: 'Wecraft',
     title: 'fullStackDev',
+    experience: 'experienceContent1',
     content: (
       <p>
-        <p>{translate('experienceContent1')}</p>
-        <p>
-          {translate('technologiesUsed')}:
-          {[
-            {name: 'React', imgSrc: '/assets/react-logo.png'},
-            {name: 'Quarkus Java', imgSrc: '/assets/quarkus-logo.png'},
-            {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
-            {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
-            {name: 'Postgres', imgSrc: '/assets/postgres-logo.png'},
-            {name: 'MongoDB', imgSrc: '/assets/mongo-logo.png'},
-          ].map((tech, index, array) => (
-            <span className="inline-flex items-center gap-1" key={index}>
-              &nbsp;{tech.name}
-              <img
-                alt={tech.name}
-                className="my-0 inline-block rounded-md py-0 align-middle"
-                src={tech.imgSrc}
-                style={{margin: 0, padding: 0}}
-                width={20}
-              />
-              {index < array.length - 1 && ' -'}
-            </span>
-          ))}
-        </p>
+        Technologies :
+        {[
+          {name: 'React', imgSrc: '/assets/react-logo.png'},
+          {name: 'Quarkus Java', imgSrc: '/assets/quarkus-logo.png'},
+          {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
+          {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
+          {name: 'Postgres', imgSrc: '/assets/postgres-logo.png'},
+          {name: 'MongoDB', imgSrc: '/assets/mongo-logo.png'},
+        ].map((tech, index, array) => (
+          <span className="inline-flex items-center gap-1" key={index}>
+            &nbsp;{tech.name}
+            <img
+              alt={tech.name}
+              className="my-0 inline-block rounded-md py-0 align-middle"
+              src={tech.imgSrc}
+              style={{margin: 0, padding: 0}}
+              width={20}
+            />
+            {index < array.length - 1 && ' -'}
+          </span>
+        ))}
       </p>
     ),
   },
   {
     date: 'January 2024 - June 2024',
-    location: translate('experienceLocation2'),
-    title: translate('experienceTitle2'),
-    content: <p>{translate('experienceContent2')}</p>,
+    location: 'Wecraft',
+    title: 'pfe',
+    experience: 'experienceContent2',
   },
 ];
 
@@ -266,21 +259,26 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: translate('testimonialName1'),
-      image: profilepic,
-      text: translate('testimonialText1'),
+      name: 'Youssef Mseddi',
+      text: 'test1',
+      image: '/assets/ymseddi.jpg',
     },
     {
-      name: translate('testimonialName2'),
-      image: profilepic,
-      text: translate('testimonialText2'),
+      name: 'Aziz Ben Sghaeir',
+      text: 'test2',
+      image: '/assets/bal3awi.jpg',
+    },
+    {
+      name: 'Oussama Ajmi',
+      text: 'test3',
+      image: '/assets/ajmi.jpg',
     },
   ],
 };
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'If you have an idea or just want to chat, feel free to to contact me.',
+  headerText: 'getInTouch',
+  description: 'contactDescription',
   items: [
     {
       type: ContactType.Email,
@@ -289,7 +287,7 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Location,
-      text: 'Tunis, Tunisia',
+      text: 'Tunis',
       href: 'https://www.google.com/maps/place/Mutuelleville,+Tunis/data=!4m2!3m1!1s0x12fd336257d86031:0xf28a28bc2a04834e?sa=X&ved=1t:242&ictx=111',
     },
     {

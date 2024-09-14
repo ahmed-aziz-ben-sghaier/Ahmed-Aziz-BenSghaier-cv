@@ -3,9 +3,11 @@ import {MenuAlt3Icon} from '@heroicons/react/outline';
 import classNames from 'classnames';
 import Link from 'next/link';
 import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
 import {SectionId} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
+import LanguageToggle from '../LanguageToggle';
 
 export const headerID = 'headerNav';
 
@@ -48,6 +50,8 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
               section={section}
             />
           ))}
+
+          <LanguageToggle navbar={true} />
         </nav>
       </header>
     );
@@ -124,10 +128,11 @@ const NavItem: FC<{
   inactiveClass: string;
   onClick?: () => void;
 }> = memo(({section, current, inactiveClass, activeClass, onClick}) => {
+  const {t} = useTranslation();
   return (
     <Link href={`/#${section}`} passHref>
       <a className={classNames(current ? activeClass : inactiveClass)} key={section} onClick={onClick}>
-        {section}
+        {t(section)}
       </a>
     </Link>
   );
