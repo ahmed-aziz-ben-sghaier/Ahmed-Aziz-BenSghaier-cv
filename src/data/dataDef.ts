@@ -1,11 +1,11 @@
 import {StaticImageData} from 'next/image';
-import {FC, ReactNode, SVGProps} from 'react';
+import {FC, SVGProps} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
 
 export interface HomepageMeta {
   title: string;
-  description: string;
+  description?: string;
   ogImageUrl?: string;
   twitterCardType?: 'summary' | 'summary_large';
   twitterTitle?: string;
@@ -23,7 +23,7 @@ export interface HomepageMeta {
 export interface Hero {
   imageSrc: string;
   name: string;
-  description: JSX.Element;
+  description?: JSX.Element;
   actions: HeroActionItem[];
 }
 
@@ -40,13 +40,13 @@ interface HeroActionItem {
 export interface About {
   profileImageSrc?: string;
   profileImageSrc2?: string;
-  description: string;
+  description?: string;
   aboutItems: AboutItem[];
 }
 
 export interface AboutItem {
   label: string;
-  text: ReactNode;
+  text: string;
   Icon?: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 }
 
@@ -93,7 +93,8 @@ export interface TimelineItem {
   date: string;
   location: string;
   title: string;
-  content: JSX.Element;
+  content?: JSX.Element;
+  education?: string;
 }
 
 /**
@@ -115,7 +116,7 @@ export interface Testimonial {
  */
 export interface ContactSection {
   headerText?: string;
-  description: string;
+  description?: string;
   items: ContactItem[];
 }
 

@@ -2,6 +2,7 @@ import {ExternalLinkIcon} from '@heroicons/react/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
 import {isMobile} from '../../config';
 import {portfolioItems, SectionId} from '../../data/data';
@@ -10,10 +11,11 @@ import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
 
 const Portfolio: FC = memo(() => {
+  const {t} = useTranslation();
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
+        <h2 className="self-center text-xl font-bold text-white">{t('checkOut')}</h2>
         <div className=" w-full columns-2 md:columns-3 lg:columns-2">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
@@ -42,6 +44,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const linkRef = useRef<HTMLAnchorElement>(null);
+  const {t} = useTranslation();
 
   useEffect(() => {
     // Avoid hydration styling errors by setting mobile in useEffect
@@ -74,8 +77,8 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
       target="_blank">
       <div className="relative h-full w-full p-4">
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto">
-          <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
-          <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+          <h2 className="text-center font-bold text-white opacity-100">{t(title)}</h2>
+          <p className="text-xs text-white opacity-100 sm:text-sm">{t(description)}</p>
         </div>
         <ExternalLinkIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
       </div>

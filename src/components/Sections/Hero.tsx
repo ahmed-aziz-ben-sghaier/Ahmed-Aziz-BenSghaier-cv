@@ -11,14 +11,14 @@ import Socials from '../Socials';
 import {useLanguage} from './../../contexts/LanguageContext';
 
 const Hero: FC = memo(() => {
-  const {imageSrc, name, description, actions} = heroData;
+  const {imageSrc, name, actions} = heroData;
 
   const {t} = useTranslation();
   const resumeHref = useLanguage().language === 'fr' ? '/assets/cv_francais.pdf' : '/assets/cv_english.pdf';
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
-      <div className="relative flex h-screen w-screen items-center justify-center">
+      <div className="aa relative flex h-screen w-screen items-center  justify-center">
         <Image
           alt={`${name}-image`}
           className="absolute z-0"
@@ -32,7 +32,12 @@ const Hero: FC = memo(() => {
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
             <LanguageToggle />
             <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{t('myName')}</h1>
-            {description}
+            <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+              {t('heroDescription1')}
+              <strong className="text-stone-100">{t('myJobTitle')}</strong>
+              {t('heroDescription2')}
+            </p>
+            <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">{t('heroDescription3')}</p>
             <div className="flex gap-x-4 text-neutral-100">
               <Socials />
             </div>
@@ -45,7 +50,7 @@ const Hero: FC = memo(() => {
                   )}
                   href={href || resumeHref}
                   key={text}>
-                  {text}
+                  {t(text)}
                   {Icon && <Icon className="h-5 w-5 text-white sm:h-6 sm:w-6" />}
                 </a>
               ))}
