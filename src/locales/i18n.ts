@@ -17,7 +17,7 @@ const resources = {
       resume2: 'CV (English)',
       contact: 'Contact',
       aboutDescription:
-        "I started programming when I was 14. I didn't take it too seriously and was just playing around with Discord bot programming with JavaScript . It was a rogue start, though I managed to continue doing so! I started to take it more seriously from there on and learned many languages and concepts through high school and university. It was a fun journey. I've discovered a lot of knowledge which I probably would never get to learn if I didn't have the motivation to do so.",
+        "I started programming when I was 14. I didn't take it too seriously and was just playing around with Discord bot programming with JavaScript  . It was a rogue start, though I managed to continue doing so! I started to take it more seriously from there on and learned many languages and concepts through high school and university. It was a fun journey. I've discovered a lot of knowledge which I probably would never get to learn if I didn't have the motivation to do so.",
       locationLabel: 'Location',
       ageLabel: 'Age',
       nationalityLabel: 'Nationality',
@@ -79,7 +79,7 @@ const resources = {
       resume2: 'CV (Francais)',
       contact: 'Contact',
       aboutDescription:
-        "J'ai commencé à programmer à 14 ans. Je ne le prenais pas trop au sérieux et je m'amusais simplement à programmer des robots Discord avec JavaScript . C'était un début difficile, mais j'ai réussi à continuer ! J'ai commencé à le prendre plus au sérieux à partir de là et j'ai appris de nombreux langages et concepts au lycée et à l'université. Ce fut un voyage amusant. J'ai découvert beaucoup de connaissances que je n'aurais probablement jamais pu apprendre si je n'avais pas eu la motivation pour le faire.",
+        "J'ai commencé à programmer à 14 ans. Je ne le prenais pas trop au sérieux et je m'amusais simplement à programmer des robots Discord avec JavaScript  . C'était un début difficile, mais j'ai réussi à continuer ! J'ai commencé à le prendre plus au sérieux à partir de là et j'ai appris de nombreux langages et concepts au lycée et à l'université. Ce fut un voyage amusant. J'ai découvert beaucoup de connaissances que je n'aurais probablement jamais pu apprendre si je n'avais pas eu la motivation pour le faire.",
       locationLabel: 'Lieu',
       ageLabel: 'Âge',
       nationalityLabel: 'Nationalité',
