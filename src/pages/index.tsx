@@ -1,4 +1,4 @@
-import './i18n';
+import '../locales/i18n';
 
 import dynamic from 'next/dynamic';
 import {FC, memo} from 'react';
