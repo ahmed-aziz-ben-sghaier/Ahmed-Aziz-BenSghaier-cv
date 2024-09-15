@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import dynamic from 'next/dynamic';
 import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 
@@ -14,6 +15,7 @@ const Testimonials: FC = memo(() => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [scrollValue, setScrollValue] = useState(0);
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   const itemWidth = useRef(0);
   const scrollContainer = useRef<HTMLDivElement>(null);
@@ -27,10 +29,15 @@ const Testimonials: FC = memo(() => {
     return typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
   }, [imageSrc]);
 
-  // Mobile iOS doesn't allow background-fixed elements
   useEffect(() => {
-    setParallaxEnabled(!(isMobile && isApple));
+    setIsClient(true);
   }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      setParallaxEnabled(!(isMobile && isApple));
+    }
+  }, [isClient]);
 
   useEffect(() => {
     itemWidth.current = scrollContainer.current ? scrollContainer.current.offsetWidth : 0;
@@ -68,7 +75,6 @@ const Testimonials: FC = memo(() => {
 
   const {i18n} = useTranslation();
 
-  // If no testimonials, don't render the section
   if (!testimonials.length) {
     return null;
   }
@@ -85,7 +91,7 @@ const Testimonials: FC = memo(() => {
         <div className="z-10 w-full max-w-screen-md px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/60 p-6 shadow-lg">
             {i18n.language === 'en' && (
-              <h2 className="self-center text-base font-semibold   text-white">( Translated from french )</h2>
+              <h2 className="self-center text-base font-semibold text-white">( Translated from french )</h2>
             )}
             <div
               className="no-scrollbar flex w-full touch-pan-x snap-x snap-mandatory gap-x-6 overflow-x-auto scroll-smooth"
@@ -148,4 +154,4 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
   },
 );
 
-export default Testimonials;
+export default dynamic(() => Promise.resolve(Testimonials), {ssr: false});

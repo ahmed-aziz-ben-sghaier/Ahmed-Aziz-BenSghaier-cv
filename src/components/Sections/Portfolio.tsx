@@ -1,5 +1,6 @@
 import {ExternalLinkIcon} from '@heroicons/react/outline';
 import classNames from 'classnames';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 import {useTranslation} from 'react-i18next';
@@ -38,7 +39,7 @@ const Portfolio: FC = memo(() => {
 });
 
 Portfolio.displayName = 'Portfolio';
-export default Portfolio;
+export default dynamic(() => Promise.resolve(Portfolio), {ssr: false});
 
 const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, description}}) => {
   const [mobile, setMobile] = useState(false);
