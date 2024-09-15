@@ -14,7 +14,10 @@ const LanguageToggle: FC<LanguageToggleProps> = React.memo(({navbar = false}) =>
   };
 
   return (
-    <button className="transform items-center gap-2 text-lg font-bold text-white" onClick={toggleLanguage}>
+    <button
+      aria-label="Change language"
+      className="transform items-center gap-2 text-lg font-bold text-white"
+      onClick={toggleLanguage}>
       {navbar ? (
         <img
           alt={language === 'fr' ? 'English' : 'French'}
