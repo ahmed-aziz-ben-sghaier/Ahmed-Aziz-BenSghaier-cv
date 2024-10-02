@@ -17,6 +17,7 @@ import testimonialImage from '../images/testimonial.webp';
 import profilepic2 from '../images/wecraft.png';
 import cars from './../../public/assets/cars.jpg';
 import FTL from './../../public/assets/FTL.png';
+import minesweeper from './../../public/assets/minesweeper.png';
 import {
   About,
   ContactSection,
@@ -197,6 +198,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'carTrackingOCRDescription',
     url: 'https://github.com/Koussay-Akchi/safe-driving',
     image: cars,
+  },
+  {
+    title: 'Basic Minesweeper',
+    description: 'minesweeperDescription',
+    url: 'https://basic-minesweeper.web.app/',
+    image: minesweeper,
   },
 ];
 

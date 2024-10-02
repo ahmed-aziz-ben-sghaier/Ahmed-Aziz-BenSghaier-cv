@@ -65,6 +65,7 @@ const resources = {
         "I've had Koussay help me with various projects. He is not just skilled but also great at explaining technical details.",
       contactDescription: 'If you have an idea or just want to chat, feel free to to contact me.',
       getInTouch: 'Get in touch.',
+      minesweeperDescription: 'A basic Customizable Minesweeper clone built with React and vanilla Javascript.',
     },
   },
   fr: {
@@ -141,6 +142,7 @@ const resources = {
       contactDescription: "Si vous avez une idée ou souhaitez simplement discuter, n'hésitez pas à me contacter.",
       getInTouch: 'Contactez-moi.',
       'Send Email': 'Envoyer Email',
+      minesweeperDescription: 'Un clone de Minesweeper personnalisable construit avec React et Javascript.',
     },
   },
 };
