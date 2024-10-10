@@ -66,6 +66,8 @@ const resources = {
       contactDescription: 'If you have an idea or just want to chat, feel free to to contact me.',
       getInTouch: 'Get in touch.',
       minesweeperDescription: 'A basic customizable Minesweeper clone built with React and vanilla Javascript.',
+      soundgridDescription:
+        'An interactive sound grid where users can compose simple musical patterns by toggling individual cells in a grid.',
     },
   },
   fr: {
@@ -143,6 +145,8 @@ const resources = {
       getInTouch: 'Contactez-moi.',
       'Send Email': 'Envoyer Email',
       minesweeperDescription: 'Un clone de Minesweeper personnalisable construit avec React et Javascript.',
+      soundgridDescription:
+        'Une grille sonore interactive où les utilisateurs peuvent composer des motifs musicaux simples en basculant des cellules individuelles dans une grille.',
     },
   },
 };

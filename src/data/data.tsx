@@ -18,6 +18,7 @@ import profilepic2 from '../images/wecraft.png';
 import cars from './../../public/assets/cars.jpg';
 import FTL from './../../public/assets/FTL.png';
 import minesweeper from './../../public/assets/minesweeper.png';
+import soundgrid from './../../public/assets/soundgrid.png';
 import {
   About,
   ContactSection,
@@ -198,6 +199,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'carTrackingOCRDescription',
     url: 'https://github.com/Koussay-Akchi/safe-driving',
     image: cars,
+  },
+  {
+    title: 'Sound-Grid',
+    description: 'soundgridDescription',
+    url: 'https://soundgrid.web.app/',
+    image: soundgrid,
   },
   {
     title: 'Basic Minesweeper',
