@@ -1,19 +1,13 @@
-import {
-  AcademicCapIcon,
-  CalendarIcon,
-  DownloadIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-} from '@heroicons/react/outline';
+import {AcademicCapIcon, CalendarIcon, DownloadIcon, FlagIcon, MapIcon, SparklesIcon} from '@heroicons/react/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+
 import cars from './../../public/assets/cars.jpg';
-import FTL from './../../public/assets/Captur (356).png';
+import FTL from './../../public/assets/Capture (356).png';
 import minesweeper from './../../public/assets/Capture (357).png';
 import minesweeper2 from './../../public/assets/Capture (358).png';
 import soundgrid from './../../public/assets/Capture (267).png';
@@ -238,7 +232,6 @@ export const education: TimelineItem[] = [
 ];
 
 export const experience: TimelineItem[] = [
-  
   {
     date: 'January 2024 - June 2024',
     location: 'CNAM',
