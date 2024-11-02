@@ -7,17 +7,17 @@ import {initReactI18next} from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      myName: "I'm Koussay Akchi.",
+      myName: "I'm Ahmed Aziz Ben Sghaier.",
       heroDescription1: "I'm a passionate ",
       myJobTitle: 'Full Stack Software Engineer',
       heroDescription2:
         " with a strong interest in the concepts of automation and open-source technologies. I'm currently working part-time as a web developer and finishing my studies.",
       heroDescription3:
         'In my free time, you can find me taking on personal projects and collaborating with others in the tech community.',
-      resume2: 'CV (English)',
+      resume2: 'CV ',
       contact: 'Contact',
       aboutDescription:
-        "I started programming when I was 14. I didn't take it too seriously and was just playing around with Discord bot programming with JavaScript  . It was a rogue start, though I managed to continue doing so! I started to take it more seriously from there on and learned many languages and concepts through high school and university. It was a fun journey. I've discovered a lot of knowledge which I probably would never get to learn if I didn't have the motivation to do so.",
+        "I discovered programming at the age of 19 by developing Discord bots with JavaScript. Although it started as a simple hobby, my passion for coding only grew. This first contact with programming pushed me to explore new languages ​​and technologies, both in high school and university. Over the years, I had the opportunity to work on various projects, ranging from the creation of dynamic websites to robust web applications, mastering frameworks. This adventure allowed me to acquire solid expertise in full stack development, allowing me to design complete solutions, from the front-end to the back-end. Each project has been a new opportunity to learn and improve myself, and I am always looking for new challenges to continue to evolve.",
       locationLabel: 'Location',
       ageLabel: 'Age',
       nationalityLabel: 'Nationality',
@@ -29,9 +29,9 @@ const resources = {
       frontendDevelopment: 'Frontend Development',
       backendDevelopment: 'Backend Development',
       otherTools: 'Other Tools',
-      ftlAutosaveManager: 'FTL AutoSave Manager',
+      ftlAutosaveManager: 'Communication Platform',
       ftlAutosaveManagerDescription:
-        'Autosave and back-up Manager for FTL (Faster than light), helped me learn various things like creating a GUI, proper backup management for files and distributing software releases. Written entirely in Java (and an older obsolete version in python).',
+        'Design and development of part of an intuitive and efficient communication platform facilitating exchanges and collaboration between employees and customers.',
       carTrackingOCR: 'AI Car tracking and licence plate OCR',
       carTrackingOCRDescription:
         'Written in Python : Input Video → split frames to images → Detect cars using YOLO model → Draw rectangles around coordinates in image result → Track and ID cars using SSIM → If >30 frames since last calculation for that car, use contour math to try and find a visible licence plate → if found, extract and run OCR → if succesful, write the result on the result image → compile all result frames into output video.',
@@ -40,9 +40,9 @@ const resources = {
       educationISTICDetail:
         'Comprehensive program that covers software development, design, algorithms and data structures.',
       experienceContent1:
-        'Developing and maintaining a comprehensive CRM for pharmaceutical laboratories 💊. My role includes implementing front-end interfaces, developing back-end functionalities, and designing thorough tests for both.',
+        'As part of my final-year project internship, I designed and developed a communication platform aimed at improving exchanges and collaboration between employees and customers of a company.This platform, in the form of an intuitive and efficient website, allows users to share information, manage projects and interact in real time through tools such as discussion forums, collaborative workspaces and messaging systems.',
       experienceContent2:
-        "During my internship, I gained hands-on experience in developing and maintaining web applications, contributing to both front-end and back-end tasks. I worked on the CRM for pharmaceutical laboratories, focusing on the architecture's conception and initial implementation, and honing my skills in the technologies mentioned above.",
+        "The final project focuses on the design and development of a web application for managing the employee timekeeping system. This application, both intuitive and efficient, aims to automate and simplify the process of monitoring attendance and working hours. It will allow employees to quickly clock in via a user-friendly interface, while managers will be able to monitor attendance data in real time, generate detailed reports, and monitor discrepancies.",
       github: 'GitHub',
       linkedin: 'LinkedIn',
       leetcode: 'LeetCode',
@@ -58,21 +58,22 @@ const resources = {
       fullStackDev: 'Full-Stack Web Developer',
       pfe: 'End of Studies Internship',
       test1:
-        'Koussay is an exceptional team player with a keen eye for detail. Their contributions during our hackathons were instrumental in our success. Their technical skills are top-tier, and they have a knack for innovative problem-solving.',
+        'Aziz is an exceptional team player with a keen eye for detail. Their contributions during our hackathons were instrumental in our success. Their technical skills are top-tier, and they have a knack for innovative problem-solving.',
       test2:
-        'I have known Koussay for years, and he is a reliable and skilled developer. He consistently produces high-quality work and handles complex tasks with ease. Its always great to work with him.',
+        'I have known Aziz for years, and he is a reliable and skilled developer. He consistently produces high-quality work and handles complex tasks with ease. Its always great to work with him.',
       test3:
-        "I've had Koussay help me with various projects. He is not just skilled but also great at explaining technical details.",
+        "I've had Aziz help me with various projects. He is not just skilled but also great at explaining technical details.",
       contactDescription: 'If you have an idea or just want to chat, feel free to to contact me.',
       getInTouch: 'Get in touch.',
-      minesweeperDescription: 'A basic customizable Minesweeper clone built with React and vanilla Javascript.',
+      minesweeperDescription: 'Design and development of a dynamic and user-friendly e-commerce site to offer users an online shopping experience.',
       soundgridDescription:
-        'An interactive sound grid where users can compose simple musical patterns by toggling individual cells in a grid.',
+        'Design and development of an intuitive and efficient web app facilitating employee timekeeping and control.',
+       minesweeperDescription2: 'a mini social network developed in HTML, CSS, and JavaScript without frameworks. It includes a dynamic news feed with reactions, a messaging system with JSON management to simulate conversations, and a friends list with search and drag-and-drop features. Neumorphism style interface.',  
     },
   },
   fr: {
     translation: {
-      myName: 'Je suis Koussay Akchi.',
+      myName: 'Je suis Ahmed Aziz Ben Sghaier.',
       heroDescription1: 'Je suis un ',
       myJobTitle: 'Développeur Full Stack',
       heroDescription2:
@@ -82,7 +83,7 @@ const resources = {
       resume2: 'CV (Francais)',
       contact: 'Contact',
       aboutDescription:
-        "J'ai commencé à programmer à 14 ans. Je ne le prenais pas trop au sérieux et je m'amusais simplement à programmer des robots Discord avec JavaScript  . C'était un début difficile, mais j'ai réussi à continuer ! J'ai commencé à le prendre plus au sérieux à partir de là et j'ai appris de nombreux langages et concepts au lycée et à l'université. Ce fut un voyage amusant. J'ai découvert beaucoup de connaissances que je n'aurais probablement jamais pu apprendre si je n'avais pas eu la motivation pour le faire.",
+        "J'ai découvert la programmation à l'âge de 19 ans en développant des bots Discord avec JavaScript. Bien que cela ait commencé comme un simple passe-temps, ma passion pour le code n'a fait que grandir. Ce premier contact avec la programmation m'a poussé à explorer de nouveaux langages et technologies, à la fois au lycée et à l'université. Au fil des années, j'ai eu l'opportunité de travailler sur des projets variés, allant de la création de sites web dynamiques à des applications web robustes, en maîtrisant des frameworks . Cette aventure m'a permis d'acquérir une solide expertise en développement full stack, me permettant de concevoir des solutions complètes, du front-end au back-end. Chaque projet a été une nouvelle occasion d’apprendre et de me perfectionner, et je suis toujours à la recherche de nouveaux défis pour continuer à évoluer.",
       locationLabel: 'Lieu',
       ageLabel: 'Âge',
       nationalityLabel: 'Nationalité',
@@ -95,9 +96,9 @@ const resources = {
       frontendDevelopment: 'Développement Frontend',
       backendDevelopment: 'Développement Backend',
       otherTools: 'Autres outils',
-      ftlAutosaveManager: 'Gestionnaire de sauvegardes personnalisable pour jeux vidéo',
+      ftlAutosaveManager: 'Plateforme de Communication',
       ftlAutosaveManagerDescription:
-        "Gestionnaire de sauvegarde et de back-up automatique pour FTL (Faster than light), m'a aidé à apprendre diverses choses comme la création d'une interface graphique, la gestion appropriée des back-ups de fichiers et la distribution des versions de mes logiciels. Entièrement écrit en Java (et une ancienne version obsolète en Python).",
+        " Conception et développement partie d'une plateforme de communication intuitif et performant facilitant les échanges et la collaboration entre les employés et les clients.",
       carTrackingOCR: "Suivi de voiture par IA et OCR de plaque d'immatriculation",
       carTrackingOCRDescription:
         "Écrit en Python : vidéo input → diviser les trames en images → détecter les voitures à l'aide du modèle YOLO → tracer des rectangles autour des coordonnées dans l'image sortie → suivre et identifier les voitures à l'aide de SSIM → si >30 images depuis le dernier calcul pour cette voiture, utiliser des calculs de contour pour essayer de trouver une plaque d'immatriculation visible → si trouvée, extraire et exécuter l'OCR → si réussi, écrire le résultat sur l'image sortie→ compiler toutes les trames de résultat dans la vidéo de sortie.",
@@ -122,10 +123,10 @@ const resources = {
       checkOut: 'Voici quelques exemples de mes projets',
       fullStackDev: 'Développeur Web Full Stack',
       experienceContent1:
-        "Développer et maintenir un CRM complet pour les laboratoires pharmaceutiques 💊. Mon rôle comprend la mise en œuvre d'interfaces front-end, le développement de fonctionnalités back-end et la conception de tests approfondis pour les deux.",
+        "Dans le cadre de mon stage de projet de fin d’année, j'ai conçu et développé une plateforme de communication visant à améliorer les échanges et la collaboration entre les employés et les clients d'une entreprise. Cette plateforme, sous la forme d'un site web intuitif et performant, permet aux utilisateurs de partager des informations, de gérer des projets et d'interagir en temps réel à travers des outils tels que des forums de discussion, des espaces de travail collaboratifs et des systèmes de messagerie. ",
       pfe: "Stage de fin d'études",
       experienceContent2:
-        "Pendant mon stage, j'ai acquis une expérience pratique dans le développement et la maintenance d'applications Web, en contribuant à la fois aux tâches front-end et back-end. J'ai travaillé sur le CRM des laboratoires pharmaceutiques, en me concentrant sur la conception de l'architecture et la mise en œuvre initiale, et en perfectionnant mes compétences dans les technologies mentionnées ci-dessus.",
+        "Le projet de fin d'études porte sur la conception et le développement d'une application web de gestion du système de pointage des employés. Cette application, à la fois intuitive et performante, vise à automatiser et simplifier le processus de suivi des présences et des heures de travail. Elle permettra aux employés de pointer rapidement via une interface conviviale, tandis que les responsables pourront contrôler en temps réel les données de présence, générer des rapports détaillés, et surveiller les écarts. ",
       hero: 'Accueil',
       about: 'À propos',
       portfolio: 'Portfolio',
@@ -133,20 +134,21 @@ const resources = {
       skills: 'Compétences',
       stats: 'Statistiques',
       testimonials: 'Témoignages',
-      'June 2024 - Present': 'Juin 2024 - Present',
+      'August 2023 - Septembre 2023': 'Août 2023 - Septembre 2023',
       'January 2024 - June 2024': 'Janvier 2024 - Juin 2024',
       test1:
-        "Koussay est un membre d'équipe exceptionnel avec un œil attentif aux détails. Ses contributions lors de nos hackathons ont été déterminantes pour notre succès. Ses compétences techniques sont de haut niveau, et il sait résoudre les problèmes de manière innovante.",
+        "Aziz est un membre d'équipe exceptionnel avec un œil attentif aux détails. Ses contributions lors de nos hackathons ont été déterminantes pour notre succès. Ses compétences techniques sont de haut niveau, et il sait résoudre les problèmes de manière innovante.",
       test2:
-        "Je connais Koussay depuis des années, et c'est un développeur fiable et compétent. Il fait toujours un travail de haute qualité et gère les tâches complexes avec facilité. C'est toujours un plaisir de travailler avec lui.",
+        "Je connais Aziz depuis des années, et c'est un développeur fiable et compétent. Il fait toujours un travail de haute qualité et gère les tâches complexes avec facilité. C'est toujours un plaisir de travailler avec lui.",
       test3:
-        "J'ai fait appel à Koussay pour divers projets. Il n'est pas seulement compétent, mais il excelle également dans l'explication des détails techniques.",
+        "J'ai fait appel à Aziz pour divers projets. Il n'est pas seulement compétent, mais il excelle également dans l'explication des détails techniques.",
       contactDescription: "Si vous avez une idée ou souhaitez simplement discuter, n'hésitez pas à me contacter.",
       getInTouch: 'Contactez-moi.',
       'Send Email': 'Envoyer Email',
-      minesweeperDescription: 'Un clone de Minesweeper personnalisable construit avec React et Javascript.',
-      soundgridDescription:
-        'Une grille sonore interactive où les utilisateurs peuvent composer des motifs musicaux simples en basculant des cellules individuelles dans une grille.',
+      minesweeperDescription: ' Conception et développement d’un site e-commerce dynamiqueet convivial pour offrir aux utilisateurs une expérience de paiment en ligne  .',
+      soundgridDescription:'une app web intuitif et performante facilitant la pointage et le controle  des employés.',
+      minesweeperDescription2: ' un mini-réseau social développé en HTML, CSS, et JavaScript sans frameworks. Il inclut un fil dactualité dynamique avec des réactions, une messagerie avec gestion de JSON pour simuler des conversations, et une liste amis avec fonctionnalités de recherche et drag-and-drop. Interface en style neumorphisme.',
+
     },
   },
 };

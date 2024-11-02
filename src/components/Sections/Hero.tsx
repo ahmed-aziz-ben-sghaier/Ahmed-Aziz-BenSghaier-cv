@@ -15,7 +15,7 @@ const Hero: FC = memo(() => {
 
   const {t} = useTranslation();
   const resumeHref =
-    useLanguage().language === 'fr' ? '/assets/koussay_akchi_cv_francais.pdf' : '/assets/koussay_akchi_cv_english.pdf';
+    useLanguage().language === 'fr' ? '/assets/Cv de Ahmed Aziz Ben Sghaier  (2).pdf' : '/assets/Cv de Ahmed Aziz Ben Sghaier  (2).pdf';
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>

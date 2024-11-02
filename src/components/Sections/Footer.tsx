@@ -17,7 +17,7 @@ const Footer: FC = memo(() => (
       <div className="flex gap-x-4 text-neutral-500">
         <Socials />
       </div>
-      <span className="text-sm text-neutral-400">© Copyright 2024 Koussay Akchi</span>
+      <span className="text-sm text-neutral-400">© Copyright 2024 Ahmed Aziz Ben Sghaier</span>
     </div>
   </div>
 ));

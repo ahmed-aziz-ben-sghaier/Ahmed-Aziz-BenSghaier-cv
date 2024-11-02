@@ -4,21 +4,19 @@ import {
   DownloadIcon,
   FlagIcon,
   MapIcon,
-  OfficeBuildingIcon,
   SparklesIcon,
 } from '@heroicons/react/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import LeetCodeIcon from '../components/Icon/LeetCodeIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
-import profilepic2 from '../images/wecraft.png';
 import cars from './../../public/assets/cars.jpg';
-import FTL from './../../public/assets/FTL.png';
-import minesweeper from './../../public/assets/minesweeper.png';
-import soundgrid from './../../public/assets/soundgrid.png';
+import FTL from './../../public/assets/Capture d’écran (356).png';
+import minesweeper from './../../public/assets/Capture d’écran (357).png';
+import minesweeper2 from './../../public/assets/Capture d’écran (358).png';
+import soundgrid from './../../public/assets/Capture d’écran (267).png';
 import {
   About,
   ContactSection,
@@ -45,7 +43,7 @@ const calculateAge = (birthDate: Date): number => {
 };
 
 export const homePageMeta: HomepageMeta = {
-  title: 'Koussay Akchi',
+  title: 'Ben Sghaier',
   description: 'Home page',
 };
 
@@ -64,7 +62,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: 'Koussay Akchi',
+  name: 'Ben Sghaier',
   actions: [
     {
       text: 'resume2',
@@ -81,14 +79,12 @@ export const heroData: Hero = {
 
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  profileImageSrc2: profilepic2,
   aboutItems: [
     {label: 'locationLabel', text: 'Tunis', Icon: MapIcon},
     {label: 'ageLabel', text: `${calculateAge(birthDate)}`, Icon: CalendarIcon},
     {label: 'nationalityLabel', text: 'nationality', Icon: FlagIcon},
     {label: 'interestsLabel', text: 'interests', Icon: SparklesIcon},
     {label: 'studyLabel', text: ' ISTIC Borj Cedria → ESPRIT', Icon: AcademicCapIcon},
-    {label: 'employmentLabel', text: 'Wecraft', Icon: OfficeBuildingIcon},
   ],
 };
 
@@ -98,7 +94,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'English',
-        level: 10,
+        level: 6,
         image: '/assets/english.png',
       },
       {
@@ -108,7 +104,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Arabic',
-        level: 9,
+        level: 10,
         image: '/assets/arabic.png',
       },
     ],
@@ -123,7 +119,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Angular',
-        level: 7,
+        level: 5,
         image: '/assets/angular-logo.png',
       },
       {
@@ -163,6 +159,11 @@ export const skills: SkillGroup[] = [
         level: 4,
         image: '/assets/c-logo.png',
       },
+      {
+        name: 'PHP',
+        level: 9,
+        image: '/assets/c-logo.png',
+      },
     ],
   },
   {
@@ -191,32 +192,39 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'ftlAutosaveManager',
     description: 'ftlAutosaveManagerDescription',
-    url: 'https://github.com/Koussay-Akchi/FTLAutosaveManager',
+    url: 'https://github.com/ahmed-aziz-ben-sghaier/contact-whatsApp',
     image: FTL,
   },
   {
     title: 'carTrackingOCR',
     description: 'carTrackingOCRDescription',
-    url: 'https://github.com/Koussay-Akchi/safe-driving',
+    url: 'https://github.com/ahmed-aziz-ben-sghaier/safe-driving',
     image: cars,
   },
   {
-    title: 'Sound-Grid',
+    title: 'App Web ',
     description: 'soundgridDescription',
-    url: 'https://soundgrid.web.app/',
+    url: 'https://github.com/ahmed-aziz-ben-sghaier/appp-pointage',
     image: soundgrid,
   },
   {
-    title: 'Basic Minesweeper',
+    title: 'e-commerce site',
     description: 'minesweeperDescription',
-    url: 'https://basic-minesweeper.web.app/',
+    url: 'https://github.com/ahmed-aziz-ben-sghaier/b-s',
     image: minesweeper,
+  },
+
+  {
+    title: 'social network',
+    description: 'minesweeperDescription',
+    url: 'https://github.com/ahmed-aziz-ben-sghaier/mini-r-seau-social',
+    image: minesweeper2,
   },
 ];
 
 export const education: TimelineItem[] = [
   {
-    date: '2024 - 2027',
+    date: '2024 - Present',
     location: 'ESPRIT',
     title: 'educationEsprit',
     education: 'educationEspritDetail',
@@ -224,27 +232,28 @@ export const education: TimelineItem[] = [
   {
     date: '2021 - 2024',
     location: 'ISTIC Borj Cedria',
-    title: 'Licence GLSI',
+    title: 'Licence RT',
     education: 'educationISTICDetail',
   },
 ];
 
 export const experience: TimelineItem[] = [
+  
   {
-    date: 'June 2024 - Present',
-    location: 'Wecraft',
-    title: 'fullStackDev',
-    experience: 'experienceContent1',
+    date: 'January 2024 - June 2024',
+    location: 'CNAM',
+    title: 'pfe',
+    experience: 'experienceContent2',
     content: (
       <p>
         Technologies :
         {[
           {name: 'React', imgSrc: '/assets/react-logo.png'},
-          {name: 'Quarkus Java', imgSrc: '/assets/quarkus-logo.png'},
+          {name: 'Laravel', imgSrc: '/assets/téléchargement.png'},
           {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
-          {name: 'JWT', imgSrc: '/assets/jwt-logo.png'},
-          {name: 'Postgres', imgSrc: '/assets/postgres-logo.png'},
-          {name: 'MongoDB', imgSrc: '/assets/mongo-logo.png'},
+          {name: 'PWA', imgSrc: '/assets/pwa.png'},
+          {name: 'Postman', imgSrc: '/assets/Postman_(software) 1.png'},
+          {name: 'Mysql', imgSrc: '/assets/raw.png'},
         ].map((tech, index, array) => (
           <span className="inline-flex items-center gap-1" key={index}>
             &nbsp;{tech.name}
@@ -262,10 +271,34 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: 'January 2024 - June 2024',
-    location: 'Wecraft',
-    title: 'pfe',
-    experience: 'experienceContent2',
+    date: 'August 2023 - Septembre 2023',
+    location: 'Comunik CRM',
+    title: 'fullStackDev',
+    experience: 'experienceContent1',
+    content: (
+      <p>
+        Technologies :
+        {[
+          {name: 'React', imgSrc: '/assets/react-logo.png'},
+          {name: 'Laravel', imgSrc: '/assets/téléchargement.png'},
+          {name: 'Docker', imgSrc: '/assets/docker-logo.png'},
+          {name: 'Postman', imgSrc: '/assets/Postman_(software) 1.png'},
+          {name: 'MySQL', imgSrc: '/assets/raw.png'},
+        ].map((tech, index, array) => (
+          <span className="inline-flex items-center gap-1" key={index}>
+            &nbsp;{tech.name}
+            <img
+              alt={tech.name}
+              className="my-0 inline-block rounded-md py-0 align-middle"
+              src={tech.imgSrc}
+              style={{margin: 0, padding: 0}}
+              width={20}
+            />
+            {index < array.length - 1 && ' -'}
+          </span>
+        ))}
+      </p>
+    ),
   },
 ];
 
@@ -278,14 +311,14 @@ export const testimonial: TestimonialSection = {
       image: '/assets/ymseddi.jpg',
     },
     {
-      name: 'Aziz Ben Sghaeir',
+      name: 'Koussay Akchi',
       text: 'test2',
-      image: '/assets/bal3awi.jpg',
+      image: '/assets/profilepic1.jpg',
     },
     {
-      name: 'Oussama Ajmi',
+      name: 'Iyed Mansouri',
       text: 'test3',
-      image: '/assets/ajmi.jpg',
+      image: '/assets/iyed.jpg',
     },
   ],
 };
@@ -296,8 +329,8 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'akchikoussay@gmail.com',
-      href: 'mailto:akchikoussay@gmail.com',
+      text: 'ahmedazizbensghaier@gmail.com',
+      href: 'mailto:ahmedazizbensghaier@gmail.com',
     },
     {
       type: ContactType.Location,
@@ -306,8 +339,8 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Github,
-      text: 'Koussay-Akchi',
-      href: 'https://github.com/Koussay-Akchi',
+      text: 'ahmed-aziz-ben-sghaier',
+      href: 'https://github.com/ahmed-aziz-ben-sghaier',
     },
   ],
 };
@@ -316,7 +349,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Koussay-Akchi'},
-  {label: 'LeetCode', Icon: LeetCodeIcon, href: 'https://leetcode.com/u/ogNF1G5yTA/'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/koussay-akchi-782765274/'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/ahmed-aziz-ben-sghaier'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ahmed-aziz-ben-sghaier-802681230/'},
 ];
