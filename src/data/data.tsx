@@ -13,10 +13,10 @@ import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import cars from './../../public/assets/cars.jpg';
-import FTL from './../../public/assets/Capture d’écran (356).png';
-import minesweeper from './../../public/assets/Capture d’écran (357).png';
-import minesweeper2 from './../../public/assets/Capture d’écran (358).png';
-import soundgrid from './../../public/assets/Capture d’écran (267).png';
+import FTL from './../../public/assets/Captur (356).png';
+import minesweeper from './../../public/assets/Capture (357).png';
+import minesweeper2 from './../../public/assets/Capture (358).png';
+import soundgrid from './../../public/assets/Capture (267).png';
 import {
   About,
   ContactSection,
